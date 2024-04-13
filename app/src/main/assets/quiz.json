@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "quizTitle": "Empty Quiz"
+  },
+  {
+    "id": 2,
+    "quizTitle": "Test Quiz 1"
+  },
+  {
+    "id": 3,
+    "quizTitle": "Test Quiz 2"
+  },
+  {
+    "id": 4,
+    "quizTitle": "Test Quiz 3"
+  },
+  {
+    "id": 5,
+    "quizTitle": "General Knowledge"
+  }
+]

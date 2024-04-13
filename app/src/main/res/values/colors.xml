@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FF1B82FF</color>
+    <color name="red">#D3FF1B1B</color>
+    <color name="red_light">#48FF1B1B</color>
+    <color name="purple_500">#FF1D349F</color>
+    <color name="purple_700">#FF162778</color>
+    <color name="teal_200">#12855C</color>
+    <color name="green">#AB0AED30</color>
+    <color name="green_light">#230AED30</color>
+    <color name="teal_700">#105535</color>
+    <color name="black">#FF000000</color>
+    <color name="gray">#757575</color>
+    <color name="light_gray">#CDC7C7</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="colorOptionBtn">#4A4A4A</color>
+    <color name="colorQuizBackground">#A41B1B1B</color>
+    <color name="colorPrimary">#417EFF</color>
+    <color name="selectedOption">#417EFF</color>
+    <color name="originalOption">#4A4A4A</color>
+</resources>

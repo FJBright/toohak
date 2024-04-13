@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/another_item_1"
+        android:title="@string/purge_quizzes" />
+    <item
+        android:id="@+id/another_item_2"
+        android:title="@string/purge_questions" />
+    <item
+        android:id="@+id/another_item_3"
+        android:title="@string/purge_scoreboard" />
+</menu>

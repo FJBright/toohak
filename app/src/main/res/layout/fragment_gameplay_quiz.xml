@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.createGame.playGame.ActivityGameplayQuiz"
+    android:orientation="vertical"
+    android:background="@color/colorQuizBackground">
+<!--android:background="@color/cardview_dark_background"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:indeterminate="false"
+            android:max="5"
+            android:minHeight="30dp"
+            android:padding="13dp"
+            android:progress="2"
+            android:progressTint="@color/teal_200">
+
+        </ProgressBar>
+
+        <TextView
+            android:id="@+id/currentQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="40dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="@string/client_waiting">
+        </TextView>
+
+<!--        <ImageView-->
+<!--            android:id="@+id/ivQuestion"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="150sp"-->
+<!--            android:layout_marginTop="70dp"-->
+<!--            android:padding="10dp"-->
+<!--            android:contentDescription="Quiz alt image"-->
+<!--            android:src="@drawable/kotlin_mascot">-->
+
+<!--        </ImageView>-->
+
+
+        <!-- Option 1 & 2 -->
+
+        <ProgressBar
+            android:id="@+id/loadingBar"
+            android:layout_marginTop="70dp"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+
+        <LinearLayout
+            android:id="@+id/areaToHide"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/topAnswers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="70dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/questionOption1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="20dp"
+                    tools:text="@string/place_holder"
+                    android:textColor="@color/colorOptionBtn"
+                    android:background="@drawable/default_option_border">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/questionOption2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="20dp"
+                    tools:text="@string/place_holder"
+                    android:textColor="@color/colorOptionBtn"
+                    android:background="@drawable/default_option_border">
+                </TextView>
+            </LinearLayout>
+
+            <!-- Option 3 & 4 -->
+            <LinearLayout
+                android:id="@+id/bottomAnswers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/questionOption3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="20dp"
+                    tools:text="@string/place_holder"
+                    android:textColor="@color/colorOptionBtn"
+                    android:background="@drawable/default_option_border">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/questionOption4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="20dp"
+                    tools:text="@string/place_holder"
+                    android:textColor="@color/colorOptionBtn"
+                    android:background="@drawable/default_option_border">
+                </TextView>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAnswerConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/confirm"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:textSize="20sp"
+                android:textStyle="bold">
+            </Button>
+
+
+            <Button
+                android:id="@+id/btnEndRound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/end_round"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:textSize="20sp"
+                android:textStyle="bold">
+            </Button>
+
+            <TextView
+                android:id="@+id/text_num_confirmed_answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+            >
+            </TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/permissionFragment">
+    <fragment
+        android:id="@+id/permissionFragment"
+        android:name="com.example.notKahoot.ui.connection.PermissionFragment"
+        android:label="fragment_permission"
+        tools:layout="@layout/fragment_permission">
+        <action
+            android:id="@+id/action_permissionFragment_to_connectClientSetName"
+            app:destination="@id/connectClientSetName" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/connectServerFragment"
+        android:name="com.example.notKahoot.ui.connection.ConnectServerFragment"
+        android:label="fragment_connect_server"
+        tools:layout="@layout/fragment_connect_server">
+        <action
+            android:id="@+id/action_connectServerFragment_to_FragmentGameplayQuiz"
+            app:destination="@id/FragmentGameplayQuiz" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/connectClientFragment"
+        android:name="com.example.notKahoot.ui.connection.ConnectClientFragment"
+        android:label="Join Game" >
+        <action
+            android:id="@+id/action_connectClientFragment_to_FragmentGameplayQuiz"
+            app:destination="@id/FragmentGameplayQuiz" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FragmentGameplayQuiz"
+        android:name="com.example.notKahoot.ui.createGame.playGame.GameplayQuizFragment"
+        android:label="@string/questions_fragment"
+        tools:layout="@layout/fragment_gameplay_quiz">
+        <action
+            android:id="@+id/action_FragmentGameplayQuiz_to_FragmentGameplayResults"
+            app:destination="@id/FragmentGameplayResults"
+
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/your_MainGraph_id"
+            app:popUpToInclusive="true"
+
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/h_slide_in_left"
+            app:popExitAnim="@anim/h_slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/FragmentGameplayResults"
+        android:name="com.example.notKahoot.ui.createGame.playGame.GameplayResultsFragment"
+        android:label="@string/results_fragment"
+        tools:layout="@layout/fragment_gameplay_results">
+    </fragment>
+
+    <fragment
+        android:id="@+id/connectClientSetName"
+        android:name="com.example.notKahoot.ConnectClientSetNameFragment"
+        android:label="fragment_connect_client_set_name"
+        tools:layout="@layout/fragment_connect_client_set_name" >
+        <action
+            android:id="@+id/action_permissionFragment_to_connectServerFragment"
+            app:destination="@id/connectServerFragment"
+            app:popUpTo="@+id/navigation_home"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_connectClientSetName_to_connectClientFragment"
+            app:destination="@id/connectClientFragment" />
+    </fragment>
+</navigation>

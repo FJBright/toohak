@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.notKahoot.ui.home.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_CreateGameFragment"
+            app:destination="@id/quizSelectFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/h_slide_in_left"
+            app:popExitAnim="@anim/h_slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_home_to_listFragment"
+            app:destination="@id/navigation_quiz_list" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_navigation_home_to_ScoreboardFragment"
+            app:destination="@id/navigation_scoreboard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.notKahoot.ui.settings.SettingsFragment"
+        android:label="@string/title_settings">
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_home"
+            app:destination="@+id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CreateGameFragment"
+        android:name="com.example.notKahoot.ui.createGame.StartGameFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_create_game">
+        <argument
+            android:name="currentQuiz"
+            app:argType="com.example.notKahoot.model.QuizModel" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_scoreboard"
+        android:name="com.example.notKahoot.ui.scoreboard.ScoreboardFragment"
+        android:label="@string/scoreboard"
+        tools:layout="@layout/fragment_scoreboard"/>
+
+
+
+    <!-- Quiz navigation here -->
+    <fragment
+        android:id="@+id/navigation_quiz_list"
+        android:name="com.example.notKahoot.ui.quizzes.list.FragmentQuizList"
+        android:label="Quizzes"
+        tools:layout="@layout/fragment_quiz_list" >
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/addFragment"
+
+            app:enterAnim="@anim/h_slide_in_right"
+            app:exitAnim="@anim/h_slide_out_left"
+            app:popEnterAnim="@anim/h_slide_in_left"
+            app:popExitAnim="@anim/h_slide_out_right"  />
+        <action
+            android:id="@+id/action_listFragment_to_updateFragment"
+            app:destination="@id/updateFragment"
+
+            app:enterAnim="@anim/h_slide_in_right"
+            app:exitAnim="@anim/h_slide_out_left"
+            app:popEnterAnim="@anim/h_slide_in_left"
+            app:popExitAnim="@anim/h_slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_quiz_list_to_CreateGameFragment"
+            app:destination="@id/CreateGameFragment" />
+        <action
+            android:id="@+id/action_navigation_quiz_list_to_questions_list"
+            app:destination="@id/questions_list"
+
+            app:enterAnim="@anim/h_slide_in_right"
+            app:exitAnim="@anim/h_slide_out_left"
+            app:popEnterAnim="@anim/h_slide_in_left"
+            app:popExitAnim="@anim/h_slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/questions_list"
+        android:name="com.example.notKahoot.ui.questions.list.QuestionListFragment"
+        android:label="Questions"
+        tools:layout="@layout/fragment_question_list">
+        <argument
+            android:name="currentQuiz"
+            app:argType="com.example.notKahoot.model.QuizModel" />
+        <action
+            android:id="@+id/action_questions_list_to_NavigationUpdateQuestionFragment"
+            app:destination="@id/NavigationUpdateQuestionFragment"
+
+            app:enterAnim="@anim/h_slide_in_right"
+            app:exitAnim="@anim/h_slide_out_left"
+            app:popEnterAnim="@anim/h_slide_in_left"
+            app:popExitAnim="@anim/h_slide_out_right" />
+        <action
+            android:id="@+id/action_questions_list_to_navigationAddQuestionFragment"
+            app:destination="@id/navigationAddQuestionFragment"
+
+            app:enterAnim="@anim/h_slide_in_right"
+            app:exitAnim="@anim/h_slide_out_left"
+            app:popEnterAnim="@anim/h_slide_in_left"
+            app:popExitAnim="@anim/h_slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.notKahoot.ui.quizzes.add.FragmentAddQuiz"
+        android:label="Add Quiz"
+        tools:layout="@layout/fragment_question_add" >
+    </fragment>
+    <fragment
+        android:id="@+id/navigationAddQuestionFragment"
+        android:name="com.example.notKahoot.ui.questions.add.AddQuestionFragment"
+        android:label="Add Question"
+        tools:layout="@layout/fragment_question_update">
+        <argument
+            android:name="currentQuiz"
+            app:argType="com.example.notKahoot.model.QuizModel" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.notKahoot.ui.quizzes.update.FragmentUpdateQuiz"
+        android:label="Update Quiz"
+        tools:layout="@layout/fragment_quiz_update" >
+        <argument
+            android:name="currentQuiz"
+            app:argType="com.example.notKahoot.model.QuizModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/NavigationUpdateQuestionFragment"
+        android:name="com.example.notKahoot.ui.questions.update.UpdateQuestionFragment"
+        android:label="Update Question"
+        tools:layout="@layout/fragment_question_update">
+        <argument
+            android:name="currentQuestion"
+            app:argType="com.example.notKahoot.model.QuestionModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizSelectFragment"
+        android:name="com.example.notKahoot.ui.createGame.quizSelect.QuizSelectFragment"
+        android:label="Quiz Selection"
+        tools:layout="@layout/fragment_quiz_list">
+        <action
+            android:id="@+id/action_quizSelectFragment_to_CreateGameFragment"
+            app:destination="@id/CreateGameFragment" />
+    </fragment>
+</navigation>

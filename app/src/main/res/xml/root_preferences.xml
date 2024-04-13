@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        app:title="@string/title_settings"
+        android:icon="@drawable/ic_options_black_24dp">
+        <SwitchPreferenceCompat
+            android:key="question_order"
+            android:title="@string/random_order"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/misc_setting">
+        <SwitchPreferenceCompat
+            android:key="single_player"
+            android:title="@string/single_player"/>
+        <SwitchPreferenceCompat
+            android:key="skip_name"
+            android:title="@string/skip_name"
+            android:summary="@string/skip_req"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

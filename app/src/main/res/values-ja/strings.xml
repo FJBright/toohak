@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JapaneseReps</string>
+    <string name="english_placeholder">たんご; 単語</string>
+    <string name="nav_bar_lists">リスト</string>
+    <string name="title_lists">フラッシュカードリスト</string>
+    <string name="title_settings">設定</string>
+    <string name="flash_card_list">フラッシュカード概要</string>
+    <string name="button_previous">前</string>
+    <string name="button_next">次</string>
+    <string name="messages_header">メッセージ</string>
+    <string name="home">ホーム</string>
+    <string name="settings_switch">フラッシュカードオプション</string>
+    <string name="english_first">イングリッシュファースト</string>
+    <string name="japanese_first">ジャパンファースト</string>
+    <string name="order_of_flashcards">フラッシュカードの並び順</string>
+    <string name="normal_order">通常のご注文</string>
+    <string name="reversed_order">逆順序</string>
+    <string name="random_order">ランダムオーダー</string>
+    <string name="final_card">セット完了</string>
+    <string name="reminder">5分、休憩</string>
+    <string name="reminder_notif">5分後のリマインダーを開始</string>
+    <string name="flash_card_setting">フラッシュカード側</string>
+    <string name="saved">保存された設定</string>
+    <string name="start">立ち上がり</string>
+    <string name="start_all_flashcards">すべてのフラッシュカードを開始</string>
+    <string name="all_flashcards">すべてのフラッシュカード</string>
+    <string name="place_holder">プレースホルダー</string>
+    <string name="see_random_words">ランダムな日本語を見る</string>
+    <string name="no_content_available">コンテンツがない！？</string>
+</resources>
